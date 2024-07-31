@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f9f4ed;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo-img {
+  height: 100px;
+}
+
+.all-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.all-links ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.all-links li {
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Courier New";
+}
+
+.all-links li:hover {
+  background-color: #dfdad5;
+  transition: 0.3s;
+}
+
+.link-text {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 1.3rem;
+}

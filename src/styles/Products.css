@@ -1,0 +1,63 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333;
+  font-family: "Courier New";
+  font-weight: bold;
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #777;
+}
+
+.dropdown-up {
+  top: auto !important;
+  bottom: 100%;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  transform: scale(1.4);
+}

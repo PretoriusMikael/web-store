@@ -22,8 +22,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link className="link-text" to="/about">
-              About
+            <Link className="link-text" to="/login">
+              Log in
             </Link>
           </li>
         </ul>

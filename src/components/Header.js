@@ -1,14 +1,25 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import image from "../images/img-logo.jpg";
 import "../styles/Header.css";
+import { selectLatestUsername } from "../store/usernameSlice";
 
 export default function Header() {
+  const username = useSelector(selectLatestUsername);
+
   return (
     <nav className="header">
       <Link className="logo" to="/">
         <img src={image} alt="Logo" style={{ height: "100px" }} />
       </Link>
+      <div className="welcome-msg">
+      {username && (
+        <div className="welcome-message">
+          Welcome, {username}
+        </div>
+      )}
+      </div>
       <div className="all-links">
         <ul>
           <li>
@@ -18,7 +29,7 @@ export default function Header() {
           </li>
           <li>
             <Link className="link-text" to="/cart">
-              Shopping Cart
+              Cart
             </Link>
           </li>
           <li>

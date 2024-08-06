@@ -11,9 +11,15 @@ export default function Landing() {
           Highest Quality, Lowest Prices...
         </h2>
         <p className="raleway-headingFont">
-          Step into a world where style meets affordability. At The Sneaker Shop,
+          Step into a world where style meets affordability.
+        </p>
+        <p className="raleway-headingFont">
+          At The Sneaker Shop,
           we believe everyone deserves to walk in comfort and confidence without
-          breaking the bank. Our collection boasts:
+          breaking the bank.
+        </p>
+        <p className="raleway-headingFont">
+          Our collection boasts:
         </p>
         <p className="premium-brands">
           Premium Brands: Discover the latest and greatest from top sneaker

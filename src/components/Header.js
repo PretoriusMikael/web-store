@@ -5,6 +5,7 @@ import image from "../images/img-logo.jpg";
 import "../styles/Header.css";
 import { selectLatestUsername } from "../store/usernameSlice";
 
+//functional component for the navbar
 export default function Header() {
   const username = useSelector(selectLatestUsername);
 

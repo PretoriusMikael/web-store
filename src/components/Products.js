@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card";
 import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
 import "../styles/Products.css";
+import Footer from "./Footer";
 
 const products = [
   {
@@ -107,56 +108,49 @@ export default function Products() {
   }
 
   return (
-    <div className="container-products mt-5">
-      <h2 className="products-header">Find your fit...</h2>
-      <div className="row">
-        {products.map((product) => (
-          <div className="col-md-4 mb-4" key={product.id}>
-            <Card style={{ width: "90%" }} className="product-card">
-              <Card.Img
-                variant="top"
-                src={product.image}
-                className="product-img"
-                onClick={() => handleCardClick(product)}
-              />
-              <Card.Body>
-                <div className="title-desc">
-                <Card.Title>{product.name}</Card.Title>
-                <Card.Text>{product.description}</Card.Text>
-                </div>
-                <Card.Text>
-                  <strong>{product.price}</strong>
-                </Card.Text>
-                <Link to="/cart" onClick={() => handleAddToCart(product)}>
-                  <Button variant="success">Buy Now</Button>
-                </Link>
-                <Dropdown className="mt-4">
-                  <Dropdown.Toggle variant="light" id="dropdown-basic">
-                    Select Color
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu className="dropdown-up">
-                    <Dropdown.Item>Green</Dropdown.Item>
-                    <Dropdown.Item>Blue</Dropdown.Item>
-                    <Dropdown.Item>Red</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </Card.Body>
-            </Card>
-          </div>
-        ))}
-      </div>
+    <div>
+      <div className="container-products mt-5">
+        <h2 className="products-header">Find your fit...</h2>
+        <div className="row">
+          {products.map((product) => (
+            <div className="col-md-4 mb-4" key={product.id}>
+              <Card style={{ width: "90%" }} className="product-card">
+                <Card.Img
+                  variant="top"
+                  src={product.image}
+                  className="product-img"
+                  onClick={() => handleCardClick(product)}
+                />
+                <Card.Body>
+                  <div className="title-desc">
+                  <Card.Title>{product.name}</Card.Title>
+                  <Card.Text>{product.description}</Card.Text>
+                  </div>
+                  <Card.Text>
+                    <strong>{product.price}</strong>
+                  </Card.Text>
+                  <Link to="/cart" onClick={() => handleAddToCart(product)}>
+                    <Button variant="success">Buy Now</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </div>
+          ))}
+        </div>
 
-      {selectedProduct && (
-        <Modal show={showModal} onHide={handleClose} centered>
-          <Modal.Body className="modal-body">
-            <img
-              src={selectedProduct.image}
-              alt={selectedProduct.name}
-              className="modal-img"
-            />
-          </Modal.Body>
-        </Modal>
-      )}
+        {selectedProduct && (
+          <Modal show={showModal} onHide={handleClose} centered>
+            <Modal.Body className="modal-body">
+              <img
+                src={selectedProduct.image}
+                alt={selectedProduct.name}
+                className="modal-img"
+              />
+            </Modal.Body>
+          </Modal>
+        )}
+      </div>
+    <Footer />
     </div>
   );
 }

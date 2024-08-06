@@ -1,9 +1,16 @@
+:root {
+  --green: rgb(109, 152, 134);
+  --blue: rgb(57, 62, 70);
+  --beige: rgb(242, 231, 213);
+  --white: rgb(247, 247, 247);
+}
+
 .header {
   display: flex;
   align-items: center;
-  background-color: #393E46;
+  background-color: var(--green);
   border-radius: 10px;
-  padding:  10px;
+  padding: 10px;
 }
 
 .logo {
@@ -38,7 +45,7 @@
 }
 
 .all-links li:hover {
-  background-color: #6D9886;
+  background-color: #6d9886;
   transition: 0.3s;
 }
 
@@ -46,7 +53,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #F7F7F7;;
+  color: #f7f7f7;
   font-weight: bold;
   transition: color 0.3s;
   font-size: 1.3rem;

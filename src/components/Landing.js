@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Landing.css";
 import landingImage from "../images/landing-img.jpg";
-import { Link } from "react-router-dom";
 
 export default function Landing() {
   return (
@@ -15,13 +14,10 @@ export default function Landing() {
           Step into a world where style meets affordability.
         </p>
         <p className="raleway-headingFont">
-          At The Sneaker Shop,
-          we believe everyone deserves to walk in comfort and confidence without
-          breaking the bank.
+          At The Sneaker Shop, we believe everyone deserves to walk in comfort
+          and confidence without breaking the bank.
         </p>
-        <p className="raleway-headingFont">
-          Our collection boasts:
-        </p>
+        <p className="raleway-headingFont">Our collection boasts:</p>
         <p className="premium-brands">
           Premium Brands: Discover the latest and greatest from top sneaker
           brands.
@@ -39,9 +35,6 @@ export default function Landing() {
           you take.
         </p>
         <h3 className="shop-now">Shop Now and Elevate Your Sneaker Game!</h3>
-        <Link className="login-link" to="/login">
-          Log in
-        </Link>
       </div>
     </div>
   );

@@ -34,7 +34,7 @@
 .text-body {
   position: relative;
   z-index: 1;
-  background-color: rgba(242, 231, 213, 0.8);
+  background-color: rgba(17, 18, 22, 0.8);
   border-radius: 10px;
   padding-right: 50px;
   padding-left: 50px;
@@ -44,6 +44,7 @@
   font-family: "Raleway", sans-serif;
   margin: 10px 0;
   font-weight: bold;
+  color: var(--white);
 }
 
 .premium-brands,
@@ -51,9 +52,13 @@
 .exclusive-designs,
 .comfort-guaranteed {
   margin: 10px 0;
+  font-family: "Raleway";
+  font-weight: bold;
+  color: var(--white);
 }
 
 .shop-now {
   font-weight: bold;
   margin-top: 20px;
+  color: var(--white);
 }

@@ -1,8 +1,7 @@
 :root {
-  --green: rgb(109, 152, 134);
-  --blue: rgb(57, 62, 70);
-  --beige: rgb(242, 231, 213);
-  --white: rgb(247, 247, 247);
+  --red: #d42b28;
+  --white: #f1f1f5;
+  --black: #111216;
 }
 
 .landing {
@@ -35,7 +34,7 @@
 .text-body {
   position: relative;
   z-index: 1;
-  background-color: rgba(57, 62, 70, 0.8);
+  background-color: rgba(242, 231, 213, 0.8);
   border-radius: 10px;
   padding: 5px;
 }
@@ -44,7 +43,6 @@
   font-family: "Raleway", sans-serif;
   margin: 10px 0;
   font-weight: bold;
-  color: var(--beige);
 }
 
 .premium-brands,
@@ -52,22 +50,9 @@
 .exclusive-designs,
 .comfort-guaranteed {
   margin: 10px 0;
-  color: var(--beige);
 }
 
 .shop-now {
   font-weight: bold;
   margin-top: 20px;
-  color: var(--green);
-}
-
-.login-link {
-  display: flex;
-  justify-content: flex-end;
-  margin: 10px;
-  font-size: 40px;
-  font-weight: bold;
-  margin-top: 20px;
-  color: var(--green);
-  text-decoration: none;
 }

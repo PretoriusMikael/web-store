@@ -12,7 +12,7 @@ export default function Landing() {
           Highest Quality, Lowest Prices...
         </h2>
         <p className="raleway-headingFont">
-          Step into a world where style meets affordability. At Sneaker Haven,
+          Step into a world where style meets affordability. At The Sneaker Shop,
           we believe everyone deserves to walk in comfort and confidence without
           breaking the bank. Our collection boasts:
         </p>

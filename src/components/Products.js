@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { addToCart } from "../store/cartSlice";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -19,7 +22,7 @@ const products = [
     id: 2,
     name: "Nike Roche",
     description:
-      "When the sun’s beating down your back and your drive just landed in the bunker, lean into the Roshe 2, a design that can help you find your peace when your round isn't going your way. ",
+      "When the sun’s beating down your back and your drive just landed in the bunker, lean into the Roshe, a design that can help you find your peace when your round isn't going your way. ",
     price: "$20",
     image: require("../images/shoes2.jpg"),
   },
@@ -49,42 +52,43 @@ const products = [
   },
   {
     id: 6,
-    name: "Product 6",
-    description: "Short description for product 6",
+    name: "New Balance 574 series",
+    description: "A core of soft cushioning of EVA in the midsole with a tough polyurethane rim for more support and durability.",
     price: "$60",
     image: require("../images/shoes6.jpg"),
   },
   {
     id: 7,
-    name: "Product 7",
-    description: "Short description for product 7",
+    name: "New Balance REVlite",
+    description: "REVlite offers a lightweight ride without minimizing construction or sacrificing underfoot cushioning or stability.",
     price: "$70",
     image: require("../images/shoes7.jpg"),
   },
   {
     id: 8,
-    name: "Product 8",
-    description: "Short description for product 8",
+    name: "Adidas Forum Low Velcro",
+    description: "You can start with these adidas Forum Low Shoes sized for kids. They have the chunky profile and signature X-strap that lit up the hardwood in the '80s. Maybe wait on the terry cloth headband and short shorts.",
     price: "$80",
     image: require("../images/shoes8.jpg"),
   },
   {
     id: 9,
-    name: "Product 9",
-    description: "Short description for product 9",
+    name: "Nike Roche",
+    description: "When the sun’s beating down your back and your drive just landed in the bunker, lean into the Roshe, a design that can help you find your peace when your round isn't going your way.",
     price: "$90",
     image: require("../images/shoes9.jpg"),
   },
   {
     id: 10,
-    name: "Product 10",
-    description: "Short description for product 10",
+    name: "Nike Air Force 1 High",
+    description: "The crisp, easy to clean upper makes it perfect off-court attire while the high-top design and cupsole finish underfoot nods to b-ball DNA.",
     price: "$100",
     image: require("../images/shoes10.jpg"),
   },
 ];
 
 export default function Products() {
+  const dispatch = useDispatch();
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
@@ -98,8 +102,12 @@ export default function Products() {
     setSelectedProduct(null);
   };
 
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  }
+
   return (
-    <div className="container mt-5">
+    <div className="container-products mt-5">
       <h2 className="products-header">Find your fit...</h2>
       <div className="row">
         {products.map((product) => (
@@ -112,12 +120,16 @@ export default function Products() {
                 onClick={() => handleCardClick(product)}
               />
               <Card.Body>
+                <div className="title-desc">
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>{product.description}</Card.Text>
+                </div>
                 <Card.Text>
                   <strong>{product.price}</strong>
                 </Card.Text>
-                <Button variant="success">Buy Now</Button>
+                <Link to="/cart" onClick={() => handleAddToCart(product)}>
+                  <Button variant="success">Buy Now</Button>
+                </Link>
                 <Dropdown className="mt-4">
                   <Dropdown.Toggle variant="light" id="dropdown-basic">
                     Select Color

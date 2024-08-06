@@ -1,14 +1,13 @@
 :root {
-  --green: rgb(109, 152, 134);
-  --blue: rgb(57, 62, 70);
-  --beige: rgb(242, 231, 213);
-  --white: rgb(247, 247, 247);
+  --red: #d42b28;
+  --white: #f1f1f5;
+  --black: #111216;
 }
 
 .header {
   display: flex;
   align-items: center;
-  background-color: var(--green);
+  background-color: #393e46;
   border-radius: 10px;
   padding: 10px;
 }
@@ -16,7 +15,7 @@
 .logo {
   display: flex;
   align-items: center;
-  margin-right: auto;
+  margin-right: 15px;
   border-radius: 5px;
 }
 
@@ -57,4 +56,12 @@
   font-weight: bold;
   transition: color 0.3s;
   font-size: 1.3rem;
+}
+
+.welcome-msg {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: "raleway";
+  margin-right: auto;
 }

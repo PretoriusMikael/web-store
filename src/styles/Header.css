@@ -1,15 +1,15 @@
 :root {
-  --red: #D42B28;
-  --white: #F1F1F5;
+  --red: #d42b28;
+  --white: #f1f1f5;
   --black: #111216;
 }
 
 .header {
   display: flex;
   align-items: center;
-  background-color: var(--red);
+  background-color: #393e46;
   border-radius: 10px;
-  padding:  10px;
+  padding: 10px;
 }
 
 .logo {
@@ -44,7 +44,7 @@
 }
 
 .all-links li:hover {
-  background-color: var(--black);
+  background-color: #6d9886;
   transition: 0.3s;
 }
 
@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--white);
+  color: #f7f7f7;
   font-weight: bold;
   transition: color 0.3s;
   font-size: 1.3rem;

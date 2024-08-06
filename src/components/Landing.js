@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Landing.css";
 import landingImage from "../images/landing-img.jpg";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   return (
@@ -38,6 +39,9 @@ export default function Landing() {
           you take.
         </p>
         <h3 className="shop-now">Shop Now and Elevate Your Sneaker Game!</h3>
+        <Link className="login-link" to="/login">
+          Log in
+        </Link>
       </div>
     </div>
   );

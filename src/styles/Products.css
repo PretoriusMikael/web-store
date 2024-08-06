@@ -80,3 +80,17 @@ body {
   border-radius: 5px;
   transform: scale(1.4);
 }
+
+.description-container {
+  padding-top: 20px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-description {
+  flex: 1;
+  min-height: 150px;
+  overflow: hidden;
+  display: inline-block;
+}
